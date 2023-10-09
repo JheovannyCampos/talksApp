@@ -5,7 +5,7 @@ import socketIO from "socket.io-client";
 
 const backendURL =
   process.env.NODE_ENV === "production"
-    ? "https://chat.vercel.app"
+    ? "https://talks-app-server.vercel.app"
     : "http://localhost:4000";
 
 const socket = socketIO.connect(backendURL);
