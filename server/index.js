@@ -5,13 +5,13 @@ const http = require("http").Server(app);
 const PORT = 4000;
 const socketIO = require("socket.io")(http, {
   cors: {
-    origin: "*",
+    origin: ["https://talks-app-client.vercel.app", "http://localhost:3000"],
   },
 });
 
 app.use(
   cors({
-    origin: ["*"],
+    origin: ["https://talks-app-client.vercel.app", "http://localhost:3000"],
   })
 );
 let users = [];
