@@ -9,7 +9,11 @@ const socketIO = require("socket.io")(http, {
   },
 });
 
-app.use(cors());
+app.use(
+  cors({
+    origin: ["*"],
+  })
+);
 let users = [];
 
 socketIO.on("connection", (socket) => {
